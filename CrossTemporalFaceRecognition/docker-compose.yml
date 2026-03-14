@@ -1,0 +1,29 @@
+# Docker Compose 配置
+version: '3.8'
+
+services:
+  training:
+    build: .
+    container_name: cross-temporal-face-rec
+    runtime: nvidia  # 需要 NVIDIA Docker 支持
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    volumes:
+      - ./data:/workspace/data
+      - ./models:/workspace/models
+      - ./outputs:/workspace/outputs
+      - ./splits:/workspace/splits
+    working_dir: /workspace
+    command: python train_agedb.py --resume models/orangutan_best.pth --epochs 30 --batch_size 24
+
+  # 评估服务
+  evaluate:
+    build: .
+    container_name: evaluate-model
+    runtime: nvidia
+    volumes:
+      - ./data:/workspace/data
+      - ./models:/workspace/models
+      - ./splits:/workspace/splits
+    working_dir: /workspace
+    command: python evaluate.py --checkpoint models/agedb_best.pth --dataset agedb

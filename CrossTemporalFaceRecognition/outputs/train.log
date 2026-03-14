@@ -1,0 +1,194 @@
+2026-03-12 21:37:29,697 - INFO - Using device: cuda
+2026-03-12 21:37:29,697 - INFO - Config: Config(project_name='CrossTemporalFaceRecognition', seed=42, device='cuda', data=DataConfig(orangutan_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/orangutan', human_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/human', cacd_root='data/human/cacd', fg_net_root='data/human/fg_net', agedb_root='data/human/agedb', image_size=224, batch_size=16, num_workers=4, train_split=0.7, val_split=0.15, test_split=0.15), model=ModelConfig(backbone='swin_tiny_patch4_window7_224', embed_dim=768, num_heads=12, depth=12, use_temporal_cl=True, temperature=0.07, num_negatives=16384, pretrained=True), train=TrainConfig(epochs=100, start_epoch=0, lr=0.0001, weight_decay=0.0001, scheduler='cosine', warmup_epochs=5, use_mixup=True, mixup_alpha=0.2, use_cutmix=True, cutmix_alpha=1.0, label_smoothing=0.1, save_freq=10, eval_freq=5, print_freq=50, use_amp=True, grad_clip=1.0), loss=LossConfig(ce_weight=1.0, triplet_weight=0.5, tcl_weight=1.0, center_weight=0.5, margin=0.3), output_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs', model_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\models', log_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs/logs')
+2026-03-12 21:37:29,703 - INFO - Number of identities: 59
+2026-03-12 21:37:29,704 - INFO - Dataset info: {'num_samples': 272, 'num_identities': 59, 'year_range': (0, 24), 'years': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24]}
+2026-03-12 21:37:29,973 - INFO - Loading pretrained weights from Hugging Face hub (timm/swin_tiny_patch4_window7_224.ms_in1k)
+2026-03-12 21:42:26,395 - INFO - Using device: cuda
+2026-03-12 21:42:26,395 - INFO - Config: Config(project_name='CrossTemporalFaceRecognition', seed=42, device='cuda', data=DataConfig(orangutan_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/orangutan', human_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/human', cacd_root='data/human/cacd', fg_net_root='data/human/fg_net', agedb_root='data/human/agedb', image_size=224, batch_size=16, num_workers=4, train_split=0.7, val_split=0.15, test_split=0.15), model=ModelConfig(backbone='swin_tiny_patch4_window7_224', embed_dim=768, num_heads=12, depth=12, use_temporal_cl=True, temperature=0.07, num_negatives=16384, pretrained=False), train=TrainConfig(epochs=100, start_epoch=0, lr=0.0001, weight_decay=0.0001, scheduler='cosine', warmup_epochs=5, use_mixup=True, mixup_alpha=0.2, use_cutmix=True, cutmix_alpha=1.0, label_smoothing=0.1, save_freq=10, eval_freq=5, print_freq=50, use_amp=True, grad_clip=1.0), loss=LossConfig(ce_weight=1.0, triplet_weight=0.5, tcl_weight=1.0, center_weight=0.5, margin=0.3), output_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs', model_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\models', log_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs/logs')
+2026-03-12 21:42:26,401 - INFO - Number of identities: 59
+2026-03-12 21:42:26,402 - INFO - Dataset info: {'num_samples': 272, 'num_identities': 59, 'year_range': (0, 24), 'years': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24]}
+2026-03-12 21:42:26,804 - INFO - Model: swin_tiny_patch4_window7_224
+2026-03-12 21:43:27,494 - INFO - Using device: cuda
+2026-03-12 21:43:27,494 - INFO - Config: Config(project_name='CrossTemporalFaceRecognition', seed=42, device='cuda', data=DataConfig(orangutan_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/orangutan', human_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/human', cacd_root='data/human/cacd', fg_net_root='data/human/fg_net', agedb_root='data/human/agedb', image_size=224, batch_size=16, num_workers=4, train_split=0.7, val_split=0.15, test_split=0.15), model=ModelConfig(backbone='swin_tiny_patch4_window7_224', embed_dim=768, num_heads=12, depth=12, use_temporal_cl=True, temperature=0.07, num_negatives=16384, pretrained=False), train=TrainConfig(epochs=100, start_epoch=0, lr=0.0001, weight_decay=0.0001, scheduler='cosine', warmup_epochs=5, optimizer='adamw', use_mixup=True, mixup_alpha=0.2, use_cutmix=True, cutmix_alpha=1.0, label_smoothing=0.1, save_freq=10, eval_freq=5, print_freq=50, use_amp=True, grad_clip=1.0), loss=LossConfig(ce_weight=1.0, triplet_weight=0.5, tcl_weight=1.0, center_weight=0.5, margin=0.3), output_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs', model_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\models', log_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs/logs')
+2026-03-12 21:43:27,499 - INFO - Number of identities: 59
+2026-03-12 21:43:27,499 - INFO - Dataset info: {'num_samples': 272, 'num_identities': 59, 'year_range': (0, 24), 'years': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24]}
+2026-03-12 21:43:27,908 - INFO - Model: swin_tiny_patch4_window7_224
+2026-03-12 21:43:45,499 - INFO - Epoch [0][0/17] Loss: 7.8929 LR: 0.000100
+2026-03-12 21:43:54,214 - INFO - Validation Loss: 4.3488, Accuracy: 0.00%
+2026-03-12 21:44:10,844 - INFO - Epoch [1][0/17] Loss: 3.9098 LR: 0.000100
+2026-03-12 21:44:18,895 - INFO - Validation Loss: 4.6827, Accuracy: 0.00%
+2026-03-12 21:44:36,227 - INFO - Epoch [2][0/17] Loss: 9.9211 LR: 0.000100
+2026-03-12 21:44:44,191 - INFO - Validation Loss: 4.6158, Accuracy: 0.00%
+2026-03-12 21:45:01,408 - INFO - Epoch [3][0/17] Loss: 3.8632 LR: 0.000100
+2026-03-12 21:45:09,519 - INFO - Validation Loss: 4.4242, Accuracy: 0.00%
+2026-03-12 21:45:26,812 - INFO - Epoch [4][0/17] Loss: 3.3535 LR: 0.000100
+2026-03-12 21:45:34,744 - INFO - Validation Loss: 4.3729, Accuracy: 0.00%
+2026-03-12 21:45:51,812 - INFO - Epoch [5][0/17] Loss: 6.4314 LR: 0.000099
+2026-03-12 21:45:59,778 - INFO - Validation Loss: 4.3759, Accuracy: 0.00%
+2026-03-12 21:46:16,607 - INFO - Epoch [6][0/17] Loss: 6.3279 LR: 0.000099
+2026-03-12 21:46:25,156 - INFO - Validation Loss: 4.4151, Accuracy: 1.15%
+2026-03-12 21:46:25,254 - INFO - Saved best model: D:\Pycharmxm\pytorch_main\Project_KSJ\CrossTemporalFaceRecognition\models\orangutan_best.pth
+2026-03-12 21:46:41,981 - INFO - Epoch [7][0/17] Loss: 6.5411 LR: 0.000099
+2026-03-12 21:46:50,092 - INFO - Validation Loss: 4.2240, Accuracy: 0.00%
+2026-03-12 21:47:06,984 - INFO - Epoch [8][0/17] Loss: 6.2101 LR: 0.000098
+2026-03-12 21:47:14,806 - INFO - Validation Loss: 4.4684, Accuracy: 0.00%
+2026-03-12 21:47:31,979 - INFO - Epoch [9][0/17] Loss: 6.2741 LR: 0.000098
+2026-03-12 21:47:39,940 - INFO - Validation Loss: 4.4397, Accuracy: 0.00%
+2026-03-12 21:47:40,210 - INFO - Saved checkpoint: D:\Pycharmxm\pytorch_main\Project_KSJ\CrossTemporalFaceRecognition\models\orangutan_epoch_10.pth
+2026-03-12 21:47:57,347 - INFO - Epoch [10][0/17] Loss: 3.5285 LR: 0.000098
+2026-03-12 21:48:05,386 - INFO - Validation Loss: 4.4455, Accuracy: 0.00%
+2026-03-12 21:48:22,569 - INFO - Epoch [11][0/17] Loss: 6.4464 LR: 0.000097
+2026-03-12 21:48:30,704 - INFO - Validation Loss: 4.3763, Accuracy: 1.15%
+2026-03-12 21:48:47,536 - INFO - Epoch [12][0/17] Loss: 3.7497 LR: 0.000097
+2026-03-12 21:48:56,013 - INFO - Validation Loss: 4.3145, Accuracy: 0.00%
+2026-03-12 21:49:12,723 - INFO - Epoch [13][0/17] Loss: 6.4312 LR: 0.000096
+2026-03-12 21:49:20,961 - INFO - Validation Loss: 4.3932, Accuracy: 0.00%
+2026-03-12 21:49:37,744 - INFO - Epoch [14][0/17] Loss: 5.8256 LR: 0.000095
+2026-03-12 21:49:45,602 - INFO - Validation Loss: 4.3796, Accuracy: 1.15%
+2026-03-12 21:50:02,931 - INFO - Epoch [15][0/17] Loss: 6.4330 LR: 0.000095
+2026-03-12 21:50:10,944 - INFO - Validation Loss: 4.4619, Accuracy: 0.00%
+2026-03-12 21:50:28,118 - INFO - Epoch [16][0/17] Loss: 3.1643 LR: 0.000094
+2026-03-12 21:50:36,038 - INFO - Validation Loss: 4.5099, Accuracy: 0.00%
+2026-03-12 21:50:53,306 - INFO - Epoch [17][0/17] Loss: 6.4727 LR: 0.000093
+2026-03-12 21:51:01,316 - INFO - Validation Loss: 4.5484, Accuracy: 0.00%
+2026-03-12 21:51:18,314 - INFO - Epoch [18][0/17] Loss: 3.2444 LR: 0.000092
+2026-03-12 21:51:26,763 - INFO - Validation Loss: 4.6226, Accuracy: 1.15%
+2026-03-12 21:51:43,488 - INFO - Epoch [19][0/17] Loss: 3.4608 LR: 0.000091
+2026-03-12 21:51:51,890 - INFO - Validation Loss: 4.7850, Accuracy: 0.00%
+2026-03-12 21:51:52,173 - INFO - Saved checkpoint: D:\Pycharmxm\pytorch_main\Project_KSJ\CrossTemporalFaceRecognition\models\orangutan_epoch_20.pth
+2026-03-12 21:52:08,877 - INFO - Epoch [20][0/17] Loss: 6.6273 LR: 0.000091
+2026-03-12 21:52:16,849 - INFO - Validation Loss: 4.8699, Accuracy: 0.00%
+2026-03-12 21:52:34,272 - INFO - Epoch [21][0/17] Loss: 6.4167 LR: 0.000090
+2026-03-12 21:52:42,199 - INFO - Validation Loss: 4.7376, Accuracy: 2.30%
+2026-03-12 21:52:42,299 - INFO - Saved best model: D:\Pycharmxm\pytorch_main\Project_KSJ\CrossTemporalFaceRecognition\models\orangutan_best.pth
+2026-03-12 21:52:59,115 - INFO - Epoch [22][0/17] Loss: 6.1115 LR: 0.000089
+2026-03-12 21:53:07,072 - INFO - Validation Loss: 4.8667, Accuracy: 0.00%
+2026-03-12 21:53:24,475 - INFO - Epoch [23][0/17] Loss: 6.0470 LR: 0.000088
+2026-03-12 21:53:32,596 - INFO - Validation Loss: 4.9730, Accuracy: 0.00%
+2026-03-12 21:53:40,639 - INFO - Using device: cuda
+2026-03-12 21:53:40,639 - INFO - Config: Config(project_name='CrossTemporalFaceRecognition', seed=42, device='cuda', data=DataConfig(orangutan_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/orangutan', human_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/human', cacd_root='data/human/cacd', fg_net_root='data/human/fg_net', agedb_root='data/human/agedb', image_size=224, batch_size=16, num_workers=4, train_split=0.7, val_split=0.15, test_split=0.15), model=ModelConfig(backbone='swin_tiny_patch4_window7_224', embed_dim=768, num_heads=12, depth=12, use_temporal_cl=True, temperature=0.07, num_negatives=16384, pretrained=False), train=TrainConfig(epochs=100, start_epoch=0, lr=0.0001, weight_decay=0.0001, scheduler='cosine', warmup_epochs=5, optimizer='adamw', use_mixup=True, mixup_alpha=0.2, use_cutmix=True, cutmix_alpha=1.0, label_smoothing=0.1, save_freq=10, eval_freq=5, print_freq=50, use_amp=True, grad_clip=1.0), loss=LossConfig(ce_weight=1.0, triplet_weight=0.5, tcl_weight=1.0, center_weight=0.5, margin=0.3), output_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs', model_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\models', log_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs/logs')
+2026-03-12 21:53:40,644 - INFO - Number of identities: 59
+2026-03-12 21:53:40,644 - INFO - Dataset info: {'num_samples': 272, 'num_identities': 59, 'year_range': (0, 24), 'years': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 21, 23, 24]}
+2026-03-12 21:53:41,040 - INFO - Model: swin_tiny_patch4_window7_224
+2026-03-12 21:53:51,480 - INFO - Epoch [24][0/17] Loss: 3.3279 LR: 0.000087
+2026-03-12 21:54:00,239 - INFO - Validation Loss: 5.0808, Accuracy: 0.00%
+2026-03-12 21:54:01,828 - INFO - Epoch [0][0/17] Loss: 7.8929 LR: 0.000100
+2026-03-12 21:54:09,927 - INFO - Validation Loss: 4.3488, Accuracy: 0.00%
+2026-03-12 21:54:18,846 - INFO - Epoch [25][0/17] Loss: 6.0271 LR: 0.000086
+2026-03-12 21:54:27,530 - INFO - Validation Loss: 4.9184, Accuracy: 0.00%
+2026-03-12 21:54:29,002 - INFO - Epoch [1][0/17] Loss: 3.9098 LR: 0.000100
+2026-03-12 21:54:37,056 - INFO - Validation Loss: 4.6827, Accuracy: 0.00%
+2026-03-12 21:54:45,821 - INFO - Epoch [26][0/17] Loss: 6.4529 LR: 0.000084
+2026-03-12 21:54:54,471 - INFO - Validation Loss: 4.7524, Accuracy: 2.30%
+2026-03-12 21:54:56,109 - INFO - Epoch [2][0/17] Loss: 9.9211 LR: 0.000100
+2026-03-12 21:55:05,146 - INFO - Validation Loss: 4.6158, Accuracy: 0.00%
+2026-03-12 21:55:15,027 - INFO - Epoch [27][0/17] Loss: 3.0594 LR: 0.000083
+2026-03-12 21:55:23,784 - INFO - Validation Loss: 5.1552, Accuracy: 0.00%
+2026-03-12 21:55:25,465 - INFO - Epoch [3][0/17] Loss: 3.8632 LR: 0.000100
+2026-03-12 21:55:33,960 - INFO - Validation Loss: 4.4242, Accuracy: 0.00%
+2026-03-12 21:55:43,658 - INFO - Epoch [28][0/17] Loss: 3.0608 LR: 0.000082
+2026-03-12 21:55:55,849 - INFO - Epoch [4][0/17] Loss: 3.3535 LR: 0.000100
+2026-03-12 21:56:05,950 - INFO - Validation Loss: 4.3729, Accuracy: 0.00%
+2026-03-12 21:56:23,410 - INFO - Epoch [5][0/17] Loss: 6.4314 LR: 0.000099
+2026-03-12 21:56:31,250 - INFO - Validation Loss: 4.3759, Accuracy: 0.00%
+2026-03-12 21:56:48,404 - INFO - Epoch [6][0/17] Loss: 6.3279 LR: 0.000099
+2026-03-12 21:56:57,211 - INFO - Validation Loss: 4.4151, Accuracy: 1.15%
+2026-03-12 21:56:57,324 - INFO - Saved best model: D:\Pycharmxm\pytorch_main\Project_KSJ\CrossTemporalFaceRecognition\models\orangutan_best.pth
+2026-03-12 21:57:15,361 - INFO - Epoch [7][0/17] Loss: 6.5411 LR: 0.000099
+2026-03-12 21:57:24,487 - INFO - Validation Loss: 4.2240, Accuracy: 0.00%
+2026-03-12 21:57:43,371 - INFO - Epoch [8][0/17] Loss: 6.2101 LR: 0.000098
+2026-03-12 21:57:51,386 - INFO - Validation Loss: 4.4684, Accuracy: 0.00%
+2026-03-12 21:58:08,578 - INFO - Epoch [9][0/17] Loss: 6.2741 LR: 0.000098
+2026-03-12 21:58:16,683 - INFO - Validation Loss: 4.4397, Accuracy: 0.00%
+2026-03-12 21:58:16,957 - INFO - Saved checkpoint: D:\Pycharmxm\pytorch_main\Project_KSJ\CrossTemporalFaceRecognition\models\orangutan_epoch_10.pth
+2026-03-14 18:23:08,419 - INFO - Using device: cuda
+2026-03-14 18:23:08,419 - INFO - Config: Config(project_name='CrossTemporalFaceRecognition', seed=42, device='cuda', data=DataConfig(orangutan_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/orangutan', human_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/human', cacd_root='data/human/cacd', fg_net_root='data/human/fg_net', agedb_root='data/human/agedb', image_size=224, batch_size=24, num_workers=4, train_split=0.7, val_split=0.15, test_split=0.15), model=ModelConfig(backbone='swin_tiny_patch4_window7_224', embed_dim=768, num_heads=12, depth=12, use_temporal_cl=True, temperature=0.07, num_negatives=16384, pretrained=False), train=TrainConfig(epochs=100, start_epoch=0, lr=0.0001, weight_decay=0.0001, scheduler='cosine', warmup_epochs=5, optimizer='adamw', use_mixup=True, mixup_alpha=0.2, use_cutmix=True, cutmix_alpha=1.0, label_smoothing=0.1, save_freq=10, eval_freq=5, print_freq=50, use_amp=True, grad_clip=1.0), loss=LossConfig(ce_weight=1.0, triplet_weight=0.5, tcl_weight=1.0, center_weight=0.5, margin=0.3), output_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs', model_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\models', log_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs/logs')
+2026-03-14 18:23:08,433 - INFO - Number of identities: 340
+2026-03-14 18:23:08,434 - INFO - Dataset info: {'num_samples': 9919, 'num_identities': 340, 'year_range': (1, 101), 'years': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101]}
+2026-03-14 18:23:08,824 - INFO - Model: swin_tiny_patch4_window7_224
+2026-03-14 18:24:38,110 - INFO - Using device: cuda
+2026-03-14 18:24:38,110 - INFO - Config: Config(project_name='CrossTemporalFaceRecognition', seed=42, device='cuda', data=DataConfig(orangutan_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/orangutan', human_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/human', cacd_root='data/human/cacd', fg_net_root='data/human/fg_net', agedb_root='data/human/agedb', image_size=224, batch_size=24, num_workers=4, train_split=0.7, val_split=0.15, test_split=0.15), model=ModelConfig(backbone='swin_tiny_patch4_window7_224', embed_dim=768, num_heads=12, depth=12, use_temporal_cl=True, temperature=0.07, num_negatives=16384, pretrained=False), train=TrainConfig(epochs=100, start_epoch=0, lr=0.0001, weight_decay=0.0001, scheduler='cosine', warmup_epochs=5, optimizer='adamw', use_mixup=True, mixup_alpha=0.2, use_cutmix=True, cutmix_alpha=1.0, label_smoothing=0.1, save_freq=10, eval_freq=5, print_freq=50, use_amp=True, grad_clip=1.0), loss=LossConfig(ce_weight=1.0, triplet_weight=0.5, tcl_weight=1.0, center_weight=0.5, margin=0.3), output_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs', model_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\models', log_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs/logs')
+2026-03-14 18:24:38,124 - INFO - Number of identities: 340
+2026-03-14 18:24:38,126 - INFO - Dataset info: {'num_samples': 9919, 'num_identities': 340, 'year_range': (1, 101), 'years': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101]}
+2026-03-14 18:24:38,554 - INFO - Model: swin_tiny_patch4_window7_224
+2026-03-14 18:24:38,640 - INFO - Loading partial pretrained weights: 176/178 layers matched (different num_identities)
+2026-03-14 18:24:38,645 - INFO - Loaded pretrained weights from epoch 6
+2026-03-14 18:24:56,288 - INFO - Epoch [7][0/413] Loss: 11.6477 LR: 0.000100
+2026-03-14 18:25:01,457 - INFO - Epoch [7][50/413] Loss: 6.0910 LR: 0.000100
+2026-03-14 18:25:06,684 - INFO - Epoch [7][100/413] Loss: 5.9053 LR: 0.000100
+2026-03-14 18:25:11,857 - INFO - Epoch [7][150/413] Loss: 9.1925 LR: 0.000100
+2026-03-14 18:25:16,980 - INFO - Epoch [7][200/413] Loss: 5.8245 LR: 0.000100
+2026-03-14 18:25:22,133 - INFO - Epoch [7][250/413] Loss: 9.0733 LR: 0.000100
+2026-03-14 18:25:27,278 - INFO - Epoch [7][300/413] Loss: 5.7941 LR: 0.000100
+2026-03-14 18:25:32,452 - INFO - Epoch [7][350/413] Loss: 5.8209 LR: 0.000100
+2026-03-14 18:25:37,646 - INFO - Epoch [7][400/413] Loss: 9.1282 LR: 0.000100
+2026-03-14 18:26:01,755 - INFO - Validation Loss: 6.0350, Accuracy: 0.55%
+2026-03-14 18:26:01,849 - INFO - Saved best model: D:\Pycharmxm\pytorch_main\Project_KSJ\CrossTemporalFaceRecognition\models\agedb_best.pth
+2026-03-14 18:26:20,226 - INFO - Epoch [8][0/413] Loss: 8.8871 LR: 0.000100
+2026-03-14 18:26:25,383 - INFO - Epoch [8][50/413] Loss: 6.0183 LR: 0.000100
+2026-03-14 18:26:30,510 - INFO - Epoch [8][100/413] Loss: 9.0184 LR: 0.000100
+2026-03-14 18:26:35,726 - INFO - Epoch [8][150/413] Loss: 9.4158 LR: 0.000100
+2026-03-14 18:26:40,907 - INFO - Epoch [8][200/413] Loss: 9.1165 LR: 0.000100
+2026-03-14 18:26:46,081 - INFO - Epoch [8][250/413] Loss: 8.9010 LR: 0.000100
+2026-03-14 18:26:51,213 - INFO - Epoch [8][300/413] Loss: 8.9464 LR: 0.000100
+2026-03-14 18:26:56,406 - INFO - Epoch [8][350/413] Loss: 8.7374 LR: 0.000100
+2026-03-14 18:27:01,576 - INFO - Epoch [8][400/413] Loss: 5.8305 LR: 0.000100
+2026-03-14 18:27:25,946 - INFO - Validation Loss: 6.0207, Accuracy: 0.18%
+2026-03-14 18:27:43,571 - INFO - Epoch [9][0/413] Loss: 5.7053 LR: 0.000100
+2026-03-14 18:27:48,723 - INFO - Epoch [9][50/413] Loss: 5.7760 LR: 0.000100
+2026-03-14 18:27:53,957 - INFO - Epoch [9][100/413] Loss: 5.8905 LR: 0.000100
+2026-03-14 18:27:59,207 - INFO - Epoch [9][150/413] Loss: 8.9758 LR: 0.000100
+2026-03-14 18:28:04,374 - INFO - Epoch [9][200/413] Loss: 9.0318 LR: 0.000100
+2026-03-14 18:28:09,575 - INFO - Epoch [9][250/413] Loss: 8.8954 LR: 0.000100
+2026-03-14 18:28:14,829 - INFO - Epoch [9][300/413] Loss: 9.0615 LR: 0.000100
+2026-03-14 18:28:20,029 - INFO - Epoch [9][350/413] Loss: 5.6976 LR: 0.000100
+2026-03-14 18:28:25,191 - INFO - Epoch [9][400/413] Loss: 5.8844 LR: 0.000100
+2026-03-14 18:28:49,314 - INFO - Validation Loss: 6.0584, Accuracy: 0.03%
+2026-03-14 18:28:49,581 - INFO - Saved checkpoint: D:\Pycharmxm\pytorch_main\Project_KSJ\CrossTemporalFaceRecognition\models\agedb_epoch_10.pth
+2026-03-14 18:29:06,749 - INFO - Epoch [10][0/413] Loss: 5.7916 LR: 0.000100
+2026-03-14 18:29:11,918 - INFO - Epoch [10][50/413] Loss: 5.7588 LR: 0.000100
+2026-03-14 18:29:17,072 - INFO - Epoch [10][100/413] Loss: 5.7057 LR: 0.000100
+2026-03-14 18:29:22,099 - INFO - Epoch [10][150/413] Loss: 9.0697 LR: 0.000100
+2026-03-14 18:29:27,129 - INFO - Epoch [10][200/413] Loss: 11.3170 LR: 0.000100
+2026-03-14 18:29:32,160 - INFO - Epoch [10][250/413] Loss: 9.3421 LR: 0.000100
+2026-03-14 18:29:37,352 - INFO - Epoch [10][300/413] Loss: 9.2586 LR: 0.000100
+2026-03-14 18:29:42,379 - INFO - Epoch [10][350/413] Loss: 8.9268 LR: 0.000100
+2026-03-14 18:29:47,417 - INFO - Epoch [10][400/413] Loss: 8.8969 LR: 0.000100
+2026-03-14 18:30:09,965 - INFO - Validation Loss: 6.0697, Accuracy: 0.12%
+2026-03-14 18:30:25,956 - INFO - Epoch [11][0/413] Loss: 8.9394 LR: 0.000100
+2026-03-14 18:30:26,801 - INFO - Using device: cuda
+2026-03-14 18:30:26,802 - INFO - Config: Config(project_name='CrossTemporalFaceRecognition', seed=42, device='cuda', data=DataConfig(orangutan_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/orangutan', human_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/human', cacd_root='data/human/cacd', fg_net_root='data/human/fg_net', agedb_root='data/human/agedb', image_size=224, batch_size=24, num_workers=4, train_split=0.7, val_split=0.15, test_split=0.15), model=ModelConfig(backbone='swin_tiny_patch4_window7_224', embed_dim=768, num_heads=12, depth=12, use_temporal_cl=True, temperature=0.07, num_negatives=16384, pretrained=False), train=TrainConfig(epochs=100, start_epoch=0, lr=0.0001, weight_decay=0.0001, scheduler='cosine', warmup_epochs=5, optimizer='adamw', use_mixup=True, mixup_alpha=0.2, use_cutmix=True, cutmix_alpha=1.0, label_smoothing=0.1, save_freq=10, eval_freq=5, print_freq=50, use_amp=True, grad_clip=1.0), loss=LossConfig(ce_weight=1.0, triplet_weight=0.5, tcl_weight=1.0, center_weight=0.5, margin=0.3), output_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs', model_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\models', log_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs/logs')
+2026-03-14 18:30:26,815 - INFO - Number of identities: 340
+2026-03-14 18:30:26,816 - INFO - Dataset info: {'num_samples': 9919, 'num_identities': 340, 'year_range': (1, 101), 'years': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101]}
+2026-03-14 18:30:27,267 - INFO - Model: swin_tiny_patch4_window7_224
+2026-03-14 18:30:27,382 - INFO - Loaded pretrained weights from epoch 7
+2026-03-14 18:30:31,069 - INFO - Epoch [11][50/413] Loss: 5.7731 LR: 0.000100
+2026-03-14 18:30:36,129 - INFO - Epoch [11][100/413] Loss: 9.0061 LR: 0.000100
+2026-03-14 18:30:41,185 - INFO - Epoch [11][150/413] Loss: 8.8175 LR: 0.000100
+2026-03-14 18:30:46,240 - INFO - Epoch [11][200/413] Loss: 5.8417 LR: 0.000100
+2026-03-14 18:30:47,012 - INFO - Epoch [8][0/413] Loss: 8.8918 LR: 0.000100
+2026-03-14 18:30:59,014 - INFO - Epoch [11][250/413] Loss: 8.9298 LR: 0.000100
+2026-03-14 18:31:00,507 - INFO - Epoch [8][50/413] Loss: 5.7931 LR: 0.000100
+2026-03-14 18:31:12,574 - INFO - Epoch [11][300/413] Loss: 5.7613 LR: 0.000100
+2026-03-14 18:31:14,036 - INFO - Epoch [8][100/413] Loss: 5.8814 LR: 0.000100
+2026-03-14 18:31:26,132 - INFO - Epoch [11][350/413] Loss: 8.8608 LR: 0.000100
+2026-03-14 18:31:27,598 - INFO - Epoch [8][150/413] Loss: 8.8834 LR: 0.000100
+2026-03-14 18:31:39,714 - INFO - Epoch [11][400/413] Loss: 9.1066 LR: 0.000100
+2026-03-14 18:31:41,181 - INFO - Epoch [8][200/413] Loss: 5.7633 LR: 0.000100
+2026-03-14 18:31:47,359 - INFO - Epoch [8][250/413] Loss: 9.0487 LR: 0.000100
+2026-03-14 18:31:52,656 - INFO - Epoch [8][300/413] Loss: 5.8497 LR: 0.000100
+2026-03-14 18:31:57,885 - INFO - Epoch [8][350/413] Loss: 5.7884 LR: 0.000100
+2026-03-14 18:32:03,333 - INFO - Epoch [8][400/413] Loss: 9.1511 LR: 0.000100
+2026-03-14 18:32:11,325 - INFO - Validation Loss: 6.0690, Accuracy: 0.06%
+2026-03-14 18:32:31,252 - INFO - Using device: cuda
+2026-03-14 18:32:31,252 - INFO - Config: Config(project_name='CrossTemporalFaceRecognition', seed=42, device='cuda', data=DataConfig(orangutan_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/orangutan', human_root='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\data/human', cacd_root='data/human/cacd', fg_net_root='data/human/fg_net', agedb_root='data/human/agedb', image_size=224, batch_size=24, num_workers=4, train_split=0.7, val_split=0.15, test_split=0.15), model=ModelConfig(backbone='swin_tiny_patch4_window7_224', embed_dim=768, num_heads=12, depth=12, use_temporal_cl=True, temperature=0.07, num_negatives=16384, pretrained=False), train=TrainConfig(epochs=100, start_epoch=0, lr=0.0001, weight_decay=0.0001, scheduler='cosine', warmup_epochs=5, optimizer='adamw', use_mixup=True, mixup_alpha=0.2, use_cutmix=True, cutmix_alpha=1.0, label_smoothing=0.1, save_freq=10, eval_freq=5, print_freq=50, use_amp=True, grad_clip=1.0), loss=LossConfig(ce_weight=1.0, triplet_weight=0.5, tcl_weight=1.0, center_weight=0.5, margin=0.3), output_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs', model_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\models', log_dir='D:\\Pycharmxm\\pytorch_main\\Project_KSJ\\CrossTemporalFaceRecognition\\outputs/logs')
+2026-03-14 18:32:31,279 - INFO - Number of identities: 340
+2026-03-14 18:32:31,280 - INFO - Dataset info: {'num_samples': 9919, 'num_identities': 340, 'year_range': (1, 101), 'years': [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 101]}
+2026-03-14 18:32:31,544 - INFO - Epoch [12][0/413] Loss: 5.5687 LR: 0.000099
+2026-03-14 18:32:31,992 - INFO - Model: swin_tiny_patch4_window7_224
+2026-03-14 18:32:32,175 - INFO - Loaded pretrained weights from epoch 7
+2026-03-14 18:32:36,383 - INFO - Validation Loss: 6.0630, Accuracy: 0.43%
+2026-03-14 18:32:36,523 - INFO - Saved best model: D:\Pycharmxm\pytorch_main\Project_KSJ\CrossTemporalFaceRecognition\models\agedb_best.pth
+2026-03-14 18:32:39,662 - INFO - Epoch [12][50/413] Loss: 5.7107 LR: 0.000099
+2026-03-14 18:32:45,249 - INFO - Epoch [12][100/413] Loss: 8.8828 LR: 0.000099
+2026-03-14 18:32:50,876 - INFO - Epoch [12][150/413] Loss: 8.9281 LR: 0.000099

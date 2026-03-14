@@ -1,0 +1,77 @@
+# Cross Temporal Face Recognition - Default Configuration
+
+# Project settings
+project_name: CrossTemporalFaceRecognition
+seed: 42
+device: cuda
+
+# Directories
+output_dir: outputs
+model_dir: models
+log_dir: outputs/logs
+
+# Data configuration
+data:
+  orangutan_root: data/orangutan
+  human_root: data/human
+  cacd_root: data/human/cacd
+  fg_net_root: data/human/fg_net
+  agedb_root: data/human/agedb
+
+  image_size: 224
+  batch_size: 32
+  num_workers: 4
+
+  train_split: 0.7
+  val_split: 0.15
+  test_split: 0.15
+
+# Model configuration
+model:
+  backbone: swin_tiny_patch4_window7_224
+  embed_dim: 768
+  num_heads: 12
+  depth: 12
+
+  use_temporal_cl: true
+  temperature: 0.07
+  num_negatives: 16384
+
+  pretrained: false
+
+# Training configuration
+train:
+  epochs: 100
+  start_epoch: 0
+
+  lr: 0.0001
+  weight_decay: 0.0001
+  scheduler: cosine
+  warmup_epochs: 5
+  optimizer: adamw
+
+  use_mixup: true
+  mixup_alpha: 0.2
+  use_cutmix: true
+  cutmix_alpha: 1.0
+
+  label_smoothing: 0.1
+
+  save_freq: 10
+  eval_freq: 5
+  print_freq: 50
+
+  use_amp: true
+  grad_clip: 1.0
+
+  lr_decay_step: 30
+  lr_decay_factor: 0.1
+  lr_milestones: [30, 60, 90]
+
+# Loss configuration
+loss:
+  ce_weight: 1.0
+  triplet_weight: 0.5
+  tcl_weight: 1.0
+  center_weight: 0.5
+  margin: 0.3
