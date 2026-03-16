@@ -263,7 +263,8 @@ def evaluate(model, test_loader, device, config, logger):
 def main(args):
     # Load config
     if args.config:
-        config = load_config(args.config)
+        if not os.path.isabs(args.config):
+            args.config = os.path.join(PROJECT_ROOT, args.config)
     else:
         config = get_default_config()
 
